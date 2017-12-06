@@ -91,9 +91,9 @@ elif sys.platform.startswith('darwin'):
         '-Wno-logical-op-parentheses'
     ])
 elif sys.platform.startswith('linux'):
-    ad_sources.append('deps/sphinxbase/src/libsphinxad/ad_pulse.c')
+    ad_sources.append('deps/sphinxbase/src/libsphinxad/ad_alsa.c')
     sb_include_dirs.append('deps/sphinxbase/include/android')
-    libraries.extend(['pulse', 'pulse-simple'])
+    libraries.extend(['asound'])
     extra_compile_args.extend([
         '-Wno-unused-label',
         '-Wno-strict-prototypes',
